@@ -1,16 +1,10 @@
-platform :ios, '9.0'
+platform :ios, '10.0'
 
 target 'marvel' do
   use_frameworks!
-
-
-  target 'marvelTests' do
-    inherit! :search_paths
-    # Pods for testing
-  end
-
-  target 'marvelUITests' do
-    # Pods for testing
-  end
-
+  
+  pod 'Alamofire', '4.9.1'
+  
+  pod 'Kingfisher', '6.1.1'
+    
 end
