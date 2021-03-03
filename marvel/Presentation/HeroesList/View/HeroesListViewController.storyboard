@@ -8,16 +8,34 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--Heroes List View Controller-->
         <scene sceneID="6wR-NE-LmA">
             <objects>
-                <viewController id="5IU-Wt-ZSz" sceneMemberID="viewController">
+                <viewController id="5IU-Wt-ZSz" customClass="HeroesListViewController" customModule="marvel" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="jz9-fN-p5w">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="l2z-x3-xhT">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <connections>
+                                    <outlet property="dataSource" destination="5IU-Wt-ZSz" id="YGS-4X-lBW"/>
+                                </connections>
+                            </tableView>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="oAg-li-NTh"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="l2z-x3-xhT" firstAttribute="top" secondItem="oAg-li-NTh" secondAttribute="top" id="FKf-Th-b6y"/>
+                            <constraint firstItem="oAg-li-NTh" firstAttribute="bottom" secondItem="l2z-x3-xhT" secondAttribute="bottom" id="R2Q-7r-f3f"/>
+                            <constraint firstItem="l2z-x3-xhT" firstAttribute="leading" secondItem="oAg-li-NTh" secondAttribute="leading" id="tmL-Ic-ate"/>
+                            <constraint firstItem="oAg-li-NTh" firstAttribute="trailing" secondItem="l2z-x3-xhT" secondAttribute="trailing" id="u2T-Od-QkG"/>
+                        </constraints>
                     </view>
+                    <connections>
+                        <outlet property="tableView" destination="l2z-x3-xhT" id="Pgl-bW-IZD"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="AX2-9V-4Al" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
