@@ -10,7 +10,6 @@
 		7409CF7725F0279E003A2B30 /* HeroesListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7409CF7625F0279E003A2B30 /* HeroesListViewController.swift */; };
 		7409CF7C25F0288B003A2B30 /* HeroesListViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7409CF7B25F0288B003A2B30 /* HeroesListViewController.storyboard */; };
 		7457F32C25DED5C3001FF4D9 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7457F32B25DED5C3001FF4D9 /* AppDelegate.swift */; };
-		7457F32E25DED5C3001FF4D9 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7457F32D25DED5C3001FF4D9 /* SceneDelegate.swift */; };
 		7457F33525DED5C5001FF4D9 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7457F33425DED5C5001FF4D9 /* Assets.xcassets */; };
 		7457F33825DED5C5001FF4D9 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7457F33625DED5C5001FF4D9 /* LaunchScreen.storyboard */; };
 		7457F34325DED5C5001FF4D9 /* marvelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7457F34225DED5C5001FF4D9 /* marvelTests.swift */; };
@@ -44,7 +43,6 @@
 		7409CF7B25F0288B003A2B30 /* HeroesListViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = HeroesListViewController.storyboard; sourceTree = "<group>"; };
 		7457F32825DED5C3001FF4D9 /* marvel.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = marvel.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		7457F32B25DED5C3001FF4D9 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		7457F32D25DED5C3001FF4D9 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		7457F33425DED5C5001FF4D9 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		7457F33725DED5C5001FF4D9 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		7457F33925DED5C5001FF4D9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -172,7 +170,6 @@
 				7409CF6325F02574003A2B30 /* Presentation */,
 				7409CF6225F0251D003A2B30 /* Application */,
 				7409CF6125F0242A003A2B30 /* Resources */,
-				7457F32D25DED5C3001FF4D9 /* SceneDelegate.swift */,
 			);
 			path = marvel;
 			sourceTree = "<group>";
@@ -448,7 +445,6 @@
 			files = (
 				7457F32C25DED5C3001FF4D9 /* AppDelegate.swift in Sources */,
 				7409CF7725F0279E003A2B30 /* HeroesListViewController.swift in Sources */,
-				7457F32E25DED5C3001FF4D9 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
