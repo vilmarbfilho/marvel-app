@@ -18,6 +18,7 @@ class HeroesListViewController: UIViewController, UITableViewDataSource, UITable
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        self.tableView.separatorColor = UIColor.clear
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -27,6 +28,7 @@ class HeroesListViewController: UIViewController, UITableViewDataSource, UITable
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         if let cell = tableView.dequeueReusableCell(withIdentifier: "HeroCellIdentifier") as? HeroTableViewCell {
             cell.configureCell(heroModel: heroes[indexPath.row])
+            cell.layoutMargins = UIEdgeInsets(top: 0, left: 28, bottom: 0, right: 8)
             return cell
         }
 

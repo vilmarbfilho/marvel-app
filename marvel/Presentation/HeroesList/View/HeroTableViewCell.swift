@@ -21,5 +21,6 @@ class HeroTableViewCell: UITableViewCell {
         
         let url = URL(string: heroModel.imageURL)
         imageCell.kf.setImage(with: url)
+        imageCell.contentMode = .scaleAspectFill
     }
 }
