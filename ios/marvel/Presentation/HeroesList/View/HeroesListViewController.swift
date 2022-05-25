@@ -32,8 +32,4 @@ class HeroesListViewController: UIViewController, UITableViewDataSource, UITable
 
         return UITableViewCell()
     }
-    
-    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        return 100
-    }
 }
