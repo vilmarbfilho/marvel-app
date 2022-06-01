@@ -17,6 +17,8 @@
 		74FBD33825F108BC0052CF00 /* HeroModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74FBD33725F108BC0052CF00 /* HeroModel.swift */; };
 		74FBD33D25F1117F0052CF00 /* HeroTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74FBD33C25F1117F0052CF00 /* HeroTableViewCell.swift */; };
 		74FBD34825F153800052CF00 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74FBD34725F153800052CF00 /* SceneDelegate.swift */; };
+		A207619C2846E62A0054C7B0 /* MarvelService.swift in Sources */ = {isa = PBXBuildFile; fileRef = A207619B2846E62A0054C7B0 /* MarvelService.swift */; };
+		A20761A22846E8990054C7B0 /* DateExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = A20761A12846E8990054C7B0 /* DateExtensions.swift */; };
 		A262B07F28444386004A8A3D /* Observable.swift in Sources */ = {isa = PBXBuildFile; fileRef = A262B07E28444386004A8A3D /* Observable.swift */; };
 		A2978412283EA2A50010F697 /* HeroesListCellViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2978411283EA2A50010F697 /* HeroesListCellViewModel.swift */; };
 		C8BC023897C6147645B53933 /* Pods_marvel.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F04E0D9004FDC815AFDE9F06 /* Pods_marvel.framework */; };
@@ -58,6 +60,8 @@
 		74FBD33725F108BC0052CF00 /* HeroModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeroModel.swift; sourceTree = "<group>"; };
 		74FBD33C25F1117F0052CF00 /* HeroTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeroTableViewCell.swift; sourceTree = "<group>"; };
 		74FBD34725F153800052CF00 /* SceneDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
+		A207619B2846E62A0054C7B0 /* MarvelService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MarvelService.swift; sourceTree = "<group>"; };
+		A20761A12846E8990054C7B0 /* DateExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateExtensions.swift; sourceTree = "<group>"; };
 		A262B07E28444386004A8A3D /* Observable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Observable.swift; sourceTree = "<group>"; };
 		A2978411283EA2A50010F697 /* HeroesListCellViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeroesListCellViewModel.swift; sourceTree = "<group>"; };
 		F04E0D9004FDC815AFDE9F06 /* Pods_marvel.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_marvel.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -172,6 +176,7 @@
 				74FBD34725F153800052CF00 /* SceneDelegate.swift */,
 				7409CF6325F02574003A2B30 /* Presentation */,
 				7409CF6225F0251D003A2B30 /* Application */,
+				A207619A2846E5E70054C7B0 /* Data */,
 				7409CF6125F0242A003A2B30 /* Resources */,
 			);
 			path = marvel;
@@ -201,6 +206,23 @@
 				74FBD33725F108BC0052CF00 /* HeroModel.swift */,
 			);
 			path = model;
+			sourceTree = "<group>";
+		};
+		A207619A2846E5E70054C7B0 /* Data */ = {
+			isa = PBXGroup;
+			children = (
+				A20761A02846E8870054C7B0 /* Extensions */,
+				A207619B2846E62A0054C7B0 /* MarvelService.swift */,
+			);
+			path = Data;
+			sourceTree = "<group>";
+		};
+		A20761A02846E8870054C7B0 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				A20761A12846E8990054C7B0 /* DateExtensions.swift */,
+			);
+			path = Extensions;
 			sourceTree = "<group>";
 		};
 		A262B07D2844435D004A8A3D /* Utils */ = {
@@ -407,7 +429,9 @@
 				A2978412283EA2A50010F697 /* HeroesListCellViewModel.swift in Sources */,
 				A262B07F28444386004A8A3D /* Observable.swift in Sources */,
 				7409CF7725F0279E003A2B30 /* HeroesListViewController.swift in Sources */,
+				A20761A22846E8990054C7B0 /* DateExtensions.swift in Sources */,
 				74FBD33825F108BC0052CF00 /* HeroModel.swift in Sources */,
+				A207619C2846E62A0054C7B0 /* MarvelService.swift in Sources */,
 				74FBD33D25F1117F0052CF00 /* HeroTableViewCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
