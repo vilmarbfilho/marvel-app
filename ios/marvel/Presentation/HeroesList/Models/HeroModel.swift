@@ -9,13 +9,15 @@ import Foundation
 
 class HeroModel {
     
+    let id: Int
     let name: String
     let description: String
-    let imageURL: String
+    let imageUrl: String
     
-    init(name: String, description: String, imageURL: String) {
+    init(id: Int, name: String, description: String, imageUrl: String) {
+        self.id = id
         self.name = name
         self.description = description
-        self.imageURL = imageURL
+        self.imageUrl = imageUrl
     }
 }

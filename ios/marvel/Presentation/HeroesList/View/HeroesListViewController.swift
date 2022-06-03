@@ -13,13 +13,11 @@ class HeroesListViewController: UIViewController, UITableViewDataSource, UITable
     
     private let viewModel = HeroesListViewModel()
     
-    private var heroes: Array<HeroModel> = [
-        HeroModel(name: "Captain America", description: "The First Avenger", imageURL: "https://i.pinimg.com/originals/97/bf/27/97bf27becd0df4ff387b882572925416.jpg"),
-        HeroModel(name: "Iron Man", description: "Genius. Billionaire. Philanthropist.", imageURL: "https://conteudo.imguol.com.br/c/entretenimento/96/2020/08/07/iron-man-1596813808466_v2_450x337.jpg")
-    ]
+    private var heroes = [HeroModel]()
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        setupObservers()
         loadInfo()
     }
     
@@ -38,5 +36,14 @@ class HeroesListViewController: UIViewController, UITableViewDataSource, UITable
     
     private func loadInfo() {
         viewModel.getHeroes()
+    }
+    
+    private func setupObservers() {
+        viewModel.heroes.observe(on: self) { [weak self] array in
+            if let heroes = array {
+                self?.heroes = heroes
+                self?.tableView.reloadData()
+            }
+        }
     }
 }

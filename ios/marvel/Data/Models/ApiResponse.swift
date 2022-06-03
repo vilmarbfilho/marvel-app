@@ -15,14 +15,4 @@ struct ApiResponse<T: Decodable>: Decodable {
     let attributionHTML: String
     let data: DataResponse<T>
     let etag: String
-    
-    enum CodingKeys: String, CodingKey {
-        case code
-        case status
-        case copyright
-        case attributionText
-        case attributionHTML
-        case data
-        case etag
-    }
 }

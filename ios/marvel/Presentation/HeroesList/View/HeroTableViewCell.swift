@@ -19,7 +19,7 @@ class HeroTableViewCell: UITableViewCell {
         nameCell.text = heroModel.name
         descriptionCell.text = heroModel.description
         
-        let url = URL(string: heroModel.imageURL)
+        let url = URL(string: heroModel.imageUrl)
         imageCell.kf.setImage(with: url)
     }
 }

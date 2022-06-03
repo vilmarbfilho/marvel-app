@@ -13,12 +13,4 @@ struct DataResponse<T: Decodable>: Decodable {
     let total: Int
     let count: Int
     let results: [T]
-    
-    enum CodingKeys: String, CodingKey {
-        case offset
-        case limit
-        case total
-        case count
-        case results
-    }
 }

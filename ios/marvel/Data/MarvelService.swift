@@ -29,13 +29,17 @@ class MarvelService {
         }
     }
     
-    func getCharacters() {
+    func getCharacters(onSuccess: @escaping ([HeroesResponse]) -> Void, onFailure: @escaping () -> Void) {
         let ts = getTimestamp()
         let hash = calculateHash(timestamp: ts)
         
         AF.request("\(URL_BASE)/v1/public/characters?ts=\(ts)&apikey=\(apiKey)&hash=\(hash)").responseDecodable(of: ApiResponse<HeroesResponse>.self) { (response) in
-            guard let apiResponse = response.value else { return }
-            print(apiResponse)
+            guard let apiResponse = response.value else {
+                onFailure()
+                return
+            }
+            
+            onSuccess(apiResponse.data.results)
         }
     }
     
