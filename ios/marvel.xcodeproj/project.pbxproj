@@ -22,6 +22,10 @@
 		A20761A42846EC400054C7B0 /* StringExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = A20761A32846EC400054C7B0 /* StringExtensions.swift */; };
 		A262B07F28444386004A8A3D /* Observable.swift in Sources */ = {isa = PBXBuildFile; fileRef = A262B07E28444386004A8A3D /* Observable.swift */; };
 		A2978412283EA2A50010F697 /* HeroesListCellViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2978411283EA2A50010F697 /* HeroesListCellViewModel.swift */; };
+		A2B657A42849798200A0DED5 /* ApiResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2B657A32849798200A0DED5 /* ApiResponse.swift */; };
+		A2B657A728497F2800A0DED5 /* HeroesResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2B657A628497F2800A0DED5 /* HeroesResponse.swift */; };
+		A2B657A928497FBF00A0DED5 /* DataResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2B657A828497FBF00A0DED5 /* DataResponse.swift */; };
+		A2B657AB284981C900A0DED5 /* HeroesListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2B657AA284981C900A0DED5 /* HeroesListViewModel.swift */; };
 		C8BC023897C6147645B53933 /* Pods_marvel.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F04E0D9004FDC815AFDE9F06 /* Pods_marvel.framework */; };
 /* End PBXBuildFile section */
 
@@ -66,6 +70,10 @@
 		A20761A32846EC400054C7B0 /* StringExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StringExtensions.swift; sourceTree = "<group>"; };
 		A262B07E28444386004A8A3D /* Observable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Observable.swift; sourceTree = "<group>"; };
 		A2978411283EA2A50010F697 /* HeroesListCellViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeroesListCellViewModel.swift; sourceTree = "<group>"; };
+		A2B657A32849798200A0DED5 /* ApiResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApiResponse.swift; sourceTree = "<group>"; };
+		A2B657A628497F2800A0DED5 /* HeroesResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeroesResponse.swift; sourceTree = "<group>"; };
+		A2B657A828497FBF00A0DED5 /* DataResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataResponse.swift; sourceTree = "<group>"; };
+		A2B657AA284981C900A0DED5 /* HeroesListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeroesListViewModel.swift; sourceTree = "<group>"; };
 		F04E0D9004FDC815AFDE9F06 /* Pods_marvel.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_marvel.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -213,6 +221,7 @@
 		A207619A2846E5E70054C7B0 /* Data */ = {
 			isa = PBXGroup;
 			children = (
+				A2B657A2284977CD00A0DED5 /* Models */,
 				A20761A02846E8870054C7B0 /* Extensions */,
 				A207619B2846E62A0054C7B0 /* MarvelService.swift */,
 			);
@@ -240,8 +249,27 @@
 			isa = PBXGroup;
 			children = (
 				A2978411283EA2A50010F697 /* HeroesListCellViewModel.swift */,
+				A2B657AA284981C900A0DED5 /* HeroesListViewModel.swift */,
 			);
 			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		A2B657A2284977CD00A0DED5 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				A2B657A528497F0E00A0DED5 /* Heroes */,
+				A2B657A32849798200A0DED5 /* ApiResponse.swift */,
+				A2B657A828497FBF00A0DED5 /* DataResponse.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		A2B657A528497F0E00A0DED5 /* Heroes */ = {
+			isa = PBXGroup;
+			children = (
+				A2B657A628497F2800A0DED5 /* HeroesResponse.swift */,
+			);
+			path = Heroes;
 			sourceTree = "<group>";
 		};
 		CBA4BCD6471EC531FD283F93 /* Pods */ = {
@@ -427,13 +455,17 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A2B657A728497F2800A0DED5 /* HeroesResponse.swift in Sources */,
 				74FBD34825F153800052CF00 /* SceneDelegate.swift in Sources */,
 				7457F32C25DED5C3001FF4D9 /* AppDelegate.swift in Sources */,
 				A20761A42846EC400054C7B0 /* StringExtensions.swift in Sources */,
 				A2978412283EA2A50010F697 /* HeroesListCellViewModel.swift in Sources */,
 				A262B07F28444386004A8A3D /* Observable.swift in Sources */,
+				A2B657AB284981C900A0DED5 /* HeroesListViewModel.swift in Sources */,
 				7409CF7725F0279E003A2B30 /* HeroesListViewController.swift in Sources */,
+				A2B657A928497FBF00A0DED5 /* DataResponse.swift in Sources */,
 				A20761A22846E8990054C7B0 /* DateExtensions.swift in Sources */,
+				A2B657A42849798200A0DED5 /* ApiResponse.swift in Sources */,
 				74FBD33825F108BC0052CF00 /* HeroModel.swift in Sources */,
 				A207619C2846E62A0054C7B0 /* MarvelService.swift in Sources */,
 				74FBD33D25F1117F0052CF00 /* HeroTableViewCell.swift in Sources */,

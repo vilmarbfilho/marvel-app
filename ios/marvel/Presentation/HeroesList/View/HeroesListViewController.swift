@@ -11,6 +11,8 @@ class HeroesListViewController: UIViewController, UITableViewDataSource, UITable
     
     @IBOutlet private weak var tableView: UITableView!
     
+    private let viewModel = HeroesListViewModel()
+    
     private var heroes: Array<HeroModel> = [
         HeroModel(name: "Captain America", description: "The First Avenger", imageURL: "https://i.pinimg.com/originals/97/bf/27/97bf27becd0df4ff387b882572925416.jpg"),
         HeroModel(name: "Iron Man", description: "Genius. Billionaire. Philanthropist.", imageURL: "https://conteudo.imguol.com.br/c/entretenimento/96/2020/08/07/iron-man-1596813808466_v2_450x337.jpg")
@@ -18,6 +20,7 @@ class HeroesListViewController: UIViewController, UITableViewDataSource, UITable
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        loadInfo()
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -31,5 +34,9 @@ class HeroesListViewController: UIViewController, UITableViewDataSource, UITable
         }
 
         return UITableViewCell()
+    }
+    
+    private func loadInfo() {
+        viewModel.getHeroes()
     }
 }
