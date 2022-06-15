@@ -17,8 +17,13 @@ class HeroesListViewController: UIViewController, UITableViewDataSource, UITable
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        setupTitleScreen()
         setupObservers()
         loadInfo()
+    }
+    
+    func setupTitleScreen() {
+        self.title = "Heroes"
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
