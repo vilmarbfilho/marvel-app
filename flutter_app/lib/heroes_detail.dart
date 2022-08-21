@@ -18,6 +18,8 @@ class _HeroesDetailState extends State<HeroesDetail>
   late final TabController _controller;
   late final Timer _timer;
 
+  final double _slider_height = 300;
+
   int _index = 0;
 
   @override
@@ -56,12 +58,12 @@ class _HeroesDetailState extends State<HeroesDetail>
       child: Stack(
         children: [
           Container(
-            height: 300,
+            height: _slider_height,
             child: _heroImage(_heroes[_controller.index]),
           ),
           Container(
-            height: 300,
-            padding: EdgeInsets.only(bottom: 20.0),
+            height: _slider_height,
+            padding: const EdgeInsets.only(bottom: 20.0),
             child: Align(
               alignment: FractionalOffset.bottomCenter,
               child: TabPageSelector(
@@ -91,7 +93,7 @@ class _HeroesDetailState extends State<HeroesDetail>
     );
 
     _timer = Timer.periodic(
-      const Duration(milliseconds: 2000),
+      const Duration(milliseconds: 3000),
       (_) => _circulate(),
     );
   }
