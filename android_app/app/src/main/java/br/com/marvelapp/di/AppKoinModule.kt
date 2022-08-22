@@ -1,5 +1,6 @@
 package br.com.marvelapp.di
 
+import br.com.data.di.dataKoinModule
 import br.com.marvelapp.heroeslist.HeroesListViewModel
 import br.com.marvelapp.heroeslist.HeroesListViewModelImpl
 import org.koin.androidx.viewmodel.dsl.viewModel
@@ -13,5 +14,6 @@ val appKoinModule = module {
 }
 
 val koinModules = listOf(
-    appKoinModule
+    appKoinModule,
+    dataKoinModule
 )
