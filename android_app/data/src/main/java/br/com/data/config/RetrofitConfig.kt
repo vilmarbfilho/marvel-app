@@ -8,7 +8,7 @@ class RetrofitConfig {
 
     fun buildService() = Retrofit.Builder()
         .client(buildOkHttp())
-        .baseUrl("https://api.github.com/")
+        .baseUrl("http://gateway.marvel.com")
         .build()
         .create(MarvelService::class.java)
 
