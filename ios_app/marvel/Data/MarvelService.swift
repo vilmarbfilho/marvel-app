@@ -10,8 +10,8 @@ import Alamofire
 
 class MarvelService {
     
-    private let publicKey = "2f0be02d2438da8ea160cc70b7213d2d"
-    private let privateKey = "4e8a41aae4a96dcdd26cc26a5fdd42aba3ba6352"
+    private let publicKey = ""
+    private let privateKey = ""
     private var apiKey: String {
         get {
             return publicKey
