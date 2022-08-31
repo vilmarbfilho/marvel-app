@@ -2,7 +2,7 @@ package br.com.marvelapp.repository
 
 import br.com.marvelapp.entity.Characters
 
-interface HeroesRepository {
+interface MarvelRepository {
 
     suspend fun getCharacters():  List<Characters>
 
