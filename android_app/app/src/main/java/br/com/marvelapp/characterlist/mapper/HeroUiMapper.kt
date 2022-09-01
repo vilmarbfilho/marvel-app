@@ -6,6 +6,6 @@ import br.com.domain.entity.Character
 fun Character.toCharactersUi() = CharacterUi(
     id = this.id,
     name = this.name,
-    description = this.name,
+    description = this.description,
     imageUrl = this.imageUrl
 )
