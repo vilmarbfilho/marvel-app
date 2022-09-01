@@ -1,6 +1,6 @@
 package br.com.domain.entity
 
-data class Characters(
+data class Character(
    val id: Int,
    val name: String,
    val description: String,

@@ -4,11 +4,11 @@ import android.view.LayoutInflater
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
 import br.com.marvelapp.databinding.ItemHeroBinding
-import br.com.marvelapp.characterlist.model.HeroUi
+import br.com.marvelapp.characterlist.model.CharacterUi
 
 class CharactersAdapter : RecyclerView.Adapter<CharacterViewHolder>() {
 
-    var heroes: List<HeroUi> = emptyList()
+    var heroes: List<CharacterUi> = emptyList()
         set(value) {
             field = heroes
             notifyDataSetChanged()
