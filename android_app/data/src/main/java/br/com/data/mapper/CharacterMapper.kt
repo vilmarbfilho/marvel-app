@@ -2,7 +2,7 @@ package br.com.data.mapper
 
 import br.com.data.model.character.CharacterImageResponse
 import br.com.data.model.character.CharacterResponse
-import br.com.marvelapp.entity.Characters
+import br.com.domain.entity.Characters
 
 fun CharacterResponse.toCharacters() = Characters(
     id = this.id,

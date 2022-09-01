@@ -1,6 +1,6 @@
-package br.com.marvelapp.repository
+package br.com.domain.repository
 
-import br.com.marvelapp.entity.Characters
+import br.com.domain.entity.Characters
 
 interface MarvelRepository {
 

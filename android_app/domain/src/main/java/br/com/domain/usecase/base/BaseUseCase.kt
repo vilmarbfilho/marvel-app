@@ -1,4 +1,4 @@
-package br.com.marvelapp.usecase.base
+package br.com.domain.usecase.base
 
 import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.Dispatchers

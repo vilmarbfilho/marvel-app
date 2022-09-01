@@ -1,4 +1,4 @@
-package br.com.marvelapp.entity
+package br.com.domain.entity
 
 data class Characters(
    val id: Int,

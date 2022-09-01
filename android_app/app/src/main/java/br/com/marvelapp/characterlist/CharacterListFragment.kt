@@ -15,7 +15,7 @@ class CharacterListFragment: Fragment() {
     private lateinit var binding: FragmentHeroesListBinding
     private val viewModel: CharacterListViewModel by viewModel()
 
-    private val adapter = CharactersAdapter()
+    private val charactersAdapter = CharactersAdapter()
 
     override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?): View? {
         binding = FragmentHeroesListBinding.inflate(inflater, container, false)
@@ -25,12 +25,25 @@ class CharacterListFragment: Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
         setupRecyclerView()
+        setupObservers()
+    }
+
+    override fun onResume() {
+        super.onResume()
+        viewModel.loadCharacters()
+    }
+
+    private fun setupObservers() {
+       viewModel.characters.observe(viewLifecycleOwner) {
+            charactersAdapter.heroes = it
+       }
     }
 
     private fun setupRecyclerView() {
         with(binding.rvHeroesList) {
+            setHasFixedSize(true)
             layoutManager = LinearLayoutManager(requireContext())
-
+            adapter = charactersAdapter
         }
     }
 }

@@ -8,7 +8,11 @@ import br.com.marvelapp.characterlist.model.HeroUi
 
 class CharactersAdapter : RecyclerView.Adapter<CharacterViewHolder>() {
 
-    private var heroes: List<HeroUi> = emptyList()
+    var heroes: List<HeroUi> = emptyList()
+        set(value) {
+            field = heroes
+            notifyDataSetChanged()
+        }
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): CharacterViewHolder {
         val inflater = LayoutInflater.from(parent.context)

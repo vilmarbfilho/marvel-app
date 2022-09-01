@@ -1,4 +1,4 @@
-package br.com.marvelapp.usecase.base
+package br.com.domain.usecase.base
 
 sealed class DataResult<out T> {
 
