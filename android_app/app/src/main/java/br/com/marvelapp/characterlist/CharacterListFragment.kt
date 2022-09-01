@@ -35,7 +35,7 @@ class CharacterListFragment: Fragment() {
 
     private fun setupObservers() {
        viewModel.characters.observe(viewLifecycleOwner) {
-            charactersAdapter.heroes = it
+            charactersAdapter.dataset = it
        }
     }
 
