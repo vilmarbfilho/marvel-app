@@ -4,14 +4,14 @@ import br.com.data.service.MarvelService
 import okhttp3.OkHttpClient
 import retrofit2.Retrofit
 
-class RetrofitConfig {
+class RetrofitConfig(
+    private val httpClient: OkHttpClient
+) {
 
     fun buildService() = Retrofit.Builder()
-        .client(buildOkHttp())
+        .client(httpClient)
         .baseUrl("http://gateway.marvel.com")
         .build()
         .create(MarvelService::class.java)
-
-    private fun buildOkHttp() = OkHttpClient.Builder().build()
 
 }
