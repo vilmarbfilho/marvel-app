@@ -5,6 +5,7 @@
       <map>
         <entry key="app/src/main/res/layout/activity_main.xml" value="0.17407407407407408" />
         <entry key="app/src/main/res/layout/fragment_heroes_list.xml" value="0.1" />
+        <entry key="app/src/main/res/layout/item_character.xml" value="0.17407407407407408" />
         <entry key="app/src/main/res/xml/network_security_config.xml" value="0.1" />
       </map>
     </option>
