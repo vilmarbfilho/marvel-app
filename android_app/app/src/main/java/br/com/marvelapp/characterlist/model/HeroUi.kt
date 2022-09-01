@@ -1,4 +1,4 @@
-package br.com.marvelapp.heroeslist.model
+package br.com.marvelapp.characterlist.model
 
 data class HeroUi(
     val id: Int,

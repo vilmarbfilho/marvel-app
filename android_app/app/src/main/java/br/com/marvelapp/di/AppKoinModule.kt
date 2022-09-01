@@ -1,15 +1,15 @@
 package br.com.marvelapp.di
 
 import br.com.data.di.dataKoinModule
-import br.com.marvelapp.heroeslist.HeroesListViewModel
-import br.com.marvelapp.heroeslist.HeroesListViewModelImpl
+import br.com.marvelapp.characterlist.CharacterListViewModel
+import br.com.marvelapp.characterlist.CharacterListViewModelImpl
 import org.koin.androidx.viewmodel.dsl.viewModel
 import org.koin.dsl.module
 
 val appKoinModule = module {
     // ViewModels
-    viewModel<HeroesListViewModel> {
-        HeroesListViewModelImpl()
+    viewModel<CharacterListViewModel> {
+        CharacterListViewModelImpl()
     }
 }
 

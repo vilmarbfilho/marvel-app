@@ -1,10 +1,10 @@
-package br.com.marvelapp.heroeslist.adapter
+package br.com.marvelapp.characterlist.adapter
 
 import androidx.recyclerview.widget.RecyclerView
 import br.com.marvelapp.databinding.ItemHeroBinding
-import br.com.marvelapp.heroeslist.model.HeroUi
+import br.com.marvelapp.characterlist.model.HeroUi
 
-class HeroViewHolder(private val view: ItemHeroBinding): RecyclerView.ViewHolder(view.root) {
+class CharacterViewHolder(private val view: ItemHeroBinding): RecyclerView.ViewHolder(view.root) {
 
     fun bind(hero: HeroUi) {
         view.tvNameHeroItem.text = hero.name
