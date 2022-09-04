@@ -2,12 +2,12 @@ import 'dart:async';
 
 import 'package:flutter/material.dart';
 
-class HeroesDetail extends StatefulWidget {
+class CharacterDetail extends StatefulWidget {
   @override
-  State<HeroesDetail> createState() => _HeroesDetailState();
+  State<CharacterDetail> createState() => _CharacterDetailState();
 }
 
-class _HeroesDetailState extends State<HeroesDetail>
+class _CharacterDetailState extends State<CharacterDetail>
     with SingleTickerProviderStateMixin {
   final List<String> _heroes = [
     "https://cdn.ome.lt/DBpJI5lrvsR7NqSk6U4-HZkhn74=/770x0/smart/uploads/conteudo/fotos/marvels_spider_man_DmZ5LLh.jpg",
@@ -53,28 +53,26 @@ class _HeroesDetailState extends State<HeroesDetail>
     );
   }
 
-  Container _heroesCarouselImages() {
-    return Container(
-      child: Stack(
-        children: [
-          Container(
-            height: _slider_height,
-            child: _heroImage(_heroes[_controller.index]),
-          ),
-          Container(
-            height: _slider_height,
-            padding: const EdgeInsets.only(bottom: 20.0),
-            child: Align(
-              alignment: FractionalOffset.bottomCenter,
-              child: TabPageSelector(
-                controller: _controller,
-                color: Colors.black38,
-                selectedColor: Colors.white30,
-              ),
+  Stack _heroesCarouselImages() {
+    return Stack(
+      children: [
+        Container(
+          height: _slider_height,
+          child: _heroImage(_heroes[_controller.index]),
+        ),
+        Container(
+          height: _slider_height,
+          padding: const EdgeInsets.only(bottom: 20.0),
+          child: Align(
+            alignment: FractionalOffset.bottomCenter,
+            child: TabPageSelector(
+              controller: _controller,
+              color: Colors.black38,
+              selectedColor: Colors.white30,
             ),
-          )
-        ],
-      ),
+          ),
+        )
+      ],
     );
   }
 
