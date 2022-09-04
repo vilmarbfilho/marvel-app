@@ -9,7 +9,7 @@ class CharacterDetail extends StatefulWidget {
 
 class _CharacterDetailState extends State<CharacterDetail>
     with SingleTickerProviderStateMixin {
-  final List<String> _heroes = [
+  final List<String> _character = [
     "https://cdn.ome.lt/DBpJI5lrvsR7NqSk6U4-HZkhn74=/770x0/smart/uploads/conteudo/fotos/marvels_spider_man_DmZ5LLh.jpg",
     "https://disneyplusbrasil.com.br/wp-content/uploads/2021/04/Capitao-America-na-Lua.jpg",
     "https://conteudo.imguol.com.br/c/entretenimento/96/2020/08/07/iron-man-1596813808466_v2_615x300.jpg"
@@ -25,7 +25,7 @@ class _CharacterDetailState extends State<CharacterDetail>
   @override
   void initState() {
     super.initState();
-    _setupHeroesSlider();
+    _setupCharacterSlider();
   }
 
   @override
@@ -48,17 +48,17 @@ class _CharacterDetailState extends State<CharacterDetail>
   Container _body() {
     return Container(
       child: Column(
-        children: [_heroesCarouselImages()],
+        children: [_characterCarouselImages(), _characterDescription()],
       ),
     );
   }
 
-  Stack _heroesCarouselImages() {
+  Stack _characterCarouselImages() {
     return Stack(
       children: [
         Container(
           height: _slider_height,
-          child: _heroImage(_heroes[_controller.index]),
+          child: _characterImage(_character[_controller.index]),
         ),
         Container(
           height: _slider_height,
@@ -76,16 +76,26 @@ class _CharacterDetailState extends State<CharacterDetail>
     );
   }
 
-  Image _heroImage(String url) {
+  Image _characterImage(String url) {
     return Image.network(
       url,
       fit: BoxFit.cover,
     );
   }
 
-  void _setupHeroesSlider() {
+  Flexible _characterDescription() {
+    return const Flexible(
+      child: Text(
+        "Description",
+        style: TextStyle(fontSize: 18),
+        maxLines: 10,
+      ),
+    );
+  }
+
+  void _setupCharacterSlider() {
     _controller = TabController(
-      length: _heroes.length,
+      length: _character.length,
       initialIndex: _index,
       vsync: this,
     );
@@ -97,7 +107,7 @@ class _CharacterDetailState extends State<CharacterDetail>
   }
 
   void _circulate() {
-    (_index != _heroes.length - 1) ? _index++ : _index = 0;
+    (_index != _character.length - 1) ? _index++ : _index = 0;
     _controller.animateTo(_index);
     setState(() {});
   }
