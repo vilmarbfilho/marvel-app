@@ -1,5 +1,5 @@
+import 'package:details/character_detail.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter_app/character_detail.dart';
 
 void main() {
   runApp(const MyApp());
