@@ -6,7 +6,7 @@ pluginManagement {
     }
 }
 dependencyResolutionManagement {
-    repositoriesMode.set(RepositoriesMode.FAIL_ON_PROJECT_REPOS)
+    repositoriesMode.set(RepositoriesMode.PREFER_PROJECT)
     repositories {
         google()
         mavenCentral()
@@ -16,3 +16,16 @@ rootProject.name = "Marvel App"
 include ':app'
 include ':domain'
 include ':data'
+
+setBinding(new Binding([gradle:this]))
+
+//evaluate(new File(
+//        settingsDir.parentFile,
+//        'flutter_app/modules/details/.android/include_flutter.groovy'
+//))
+
+//include ':details'
+//project(':details').projectDir = new File('../../../flutter_app')
+
+//include ':myapp'
+//project(':myapp').projectDir = new File('../myapp')
