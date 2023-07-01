@@ -3,22 +3,25 @@ import 'dart:async';
 import 'package:flutter/material.dart';
 
 class CharacterDetail extends StatefulWidget {
+  final String nameCharacter;
+  final List<String> imagesUrl;
+
+  const CharacterDetail({
+    required this.nameCharacter,
+    required this.imagesUrl,
+    super.key,
+  });
+
   @override
   State<CharacterDetail> createState() => _CharacterDetailState();
 }
 
 class _CharacterDetailState extends State<CharacterDetail>
     with SingleTickerProviderStateMixin {
-  final List<String> _character = [
-    "https://cdn.ome.lt/DBpJI5lrvsR7NqSk6U4-HZkhn74=/770x0/smart/uploads/conteudo/fotos/marvels_spider_man_DmZ5LLh.jpg",
-    "https://disneyplusbrasil.com.br/wp-content/uploads/2021/04/Capitao-America-na-Lua.jpg",
-    "https://conteudo.imguol.com.br/c/entretenimento/96/2020/08/07/iron-man-1596813808466_v2_615x300.jpg"
-  ];
-
   late final TabController _controller;
   late final Timer _timer;
 
-  final double _slider_height = 300;
+  final double _sliderHeight = 300;
 
   int _index = 0;
 
@@ -32,7 +35,7 @@ class _CharacterDetailState extends State<CharacterDetail>
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text("Hero name"),
+        title: Text(widget.nameCharacter),
       ),
       body: _body(),
     );
@@ -45,23 +48,21 @@ class _CharacterDetailState extends State<CharacterDetail>
     super.dispose();
   }
 
-  Container _body() {
-    return Container(
-      child: Column(
-        children: [_characterCarouselImages(), _characterDescription()],
-      ),
+  Column _body() {
+    return Column(
+      children: [_characterCarouselImages(), _characterDescription()],
     );
   }
 
   Stack _characterCarouselImages() {
     return Stack(
       children: [
-        Container(
-          height: _slider_height,
-          child: _characterImage(_character[_controller.index]),
+        SizedBox(
+          height: _sliderHeight,
+          child: _characterImage(widget.imagesUrl[_controller.index]),
         ),
         Container(
-          height: _slider_height,
+          height: _sliderHeight,
           padding: const EdgeInsets.only(bottom: 20.0),
           child: Align(
             alignment: FractionalOffset.bottomCenter,
@@ -95,7 +96,7 @@ class _CharacterDetailState extends State<CharacterDetail>
 
   void _setupCharacterSlider() {
     _controller = TabController(
-      length: _character.length,
+      length: widget.imagesUrl.length,
       initialIndex: _index,
       vsync: this,
     );
@@ -107,7 +108,7 @@ class _CharacterDetailState extends State<CharacterDetail>
   }
 
   void _circulate() {
-    (_index != _character.length - 1) ? _index++ : _index = 0;
+    (_index != widget.imagesUrl.length - 1) ? _index++ : _index = 0;
     _controller.animateTo(_index);
     setState(() {});
   }
