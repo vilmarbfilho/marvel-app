@@ -10,4 +10,5 @@ abstract class CharacterListViewModel : ViewModel() {
 
     abstract fun loadCharacters()
 
+    abstract fun openCharacterDetails(characterUi: CharacterUi)
 }

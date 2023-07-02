@@ -1,20 +1,25 @@
 package br.com.marvelapp.di
 
+import androidx.appcompat.app.AppCompatActivity
 import br.com.data.di.dataKoinModule
 import br.com.domain.constants.PRIVATE_KEY
 import br.com.domain.constants.PUBLIC_KEY
 import br.com.domain.usecase.GetCharactersUseCase
 import br.com.marvelapp.characterlist.CharacterListViewModel
 import br.com.marvelapp.characterlist.CharacterListViewModelImpl
+import br.com.marvelapp.router.AppRouter
 import org.koin.androidx.viewmodel.dsl.viewModel
+import org.koin.core.parameter.parametersOf
 import org.koin.core.qualifier.named
 import org.koin.dsl.module
 
 val appKoinModule = module {
     // ViewModels
-    viewModel<CharacterListViewModel> {
-        CharacterListViewModelImpl(get())
+    viewModel<CharacterListViewModel> { (activity: AppCompatActivity) ->
+        CharacterListViewModelImpl(get(), get { parametersOf(activity)})
     }
+
+    factory { (activity: AppCompatActivity) -> AppRouter(activity) }
 
     // Use case
     factory { GetCharactersUseCase(get()) }

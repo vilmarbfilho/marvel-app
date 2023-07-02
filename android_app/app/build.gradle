@@ -21,6 +21,9 @@ android {
             minifyEnabled false
             proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
         }
+        profile {
+            initWith debug
+        }
     }
 
     viewBinding {
@@ -56,6 +59,11 @@ dependencies {
 
 //    implementation project(':details')
 //    implementation project(':myapp')
+
+    // flutter
+    debugImplementation 'br.com.marvelapp.details:flutter_debug:1.0'
+    profileImplementation 'br.com.marvelapp.details:flutter_profile:1.0'
+    releaseImplementation 'br.com.marvelapp.details:flutter_release:1.0'
 
     // koin
     implementation "io.insert-koin:koin-core:$koin_version"

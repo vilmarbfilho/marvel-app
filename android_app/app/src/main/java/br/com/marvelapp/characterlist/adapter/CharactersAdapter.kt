@@ -6,7 +6,9 @@ import androidx.recyclerview.widget.RecyclerView
 import br.com.marvelapp.characterlist.model.CharacterUi
 import br.com.marvelapp.databinding.ItemCharacterBinding
 
-class CharactersAdapter: RecyclerView.Adapter<CharacterViewHolder>() {
+class CharactersAdapter(
+    private val onClickItem: (CharacterUi) -> Unit
+): RecyclerView.Adapter<CharacterViewHolder>() {
 
     var dataset: List<CharacterUi> = emptyList()
         set(value) {
@@ -21,7 +23,9 @@ class CharactersAdapter: RecyclerView.Adapter<CharacterViewHolder>() {
     }
 
     override fun onBindViewHolder(holder: CharacterViewHolder, position: Int) {
-        holder.bind(dataset[position])
+        holder.bind(dataset[position]) {
+            onClickItem(it)
+        }
     }
 
     override fun getItemCount(): Int = dataset.size

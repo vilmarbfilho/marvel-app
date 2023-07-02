@@ -9,13 +9,16 @@ import androidx.recyclerview.widget.LinearLayoutManager
 import br.com.marvelapp.characterlist.adapter.CharactersAdapter
 import br.com.marvelapp.databinding.FragmentCharacterListBinding
 import org.koin.androidx.viewmodel.ext.android.viewModel
+import org.koin.core.parameter.parametersOf
 
 class CharacterListFragment: Fragment() {
 
     private lateinit var binding: FragmentCharacterListBinding
-    private val viewModel: CharacterListViewModel by viewModel()
+    private val viewModel: CharacterListViewModel by viewModel{ parametersOf(requireActivity()) }
 
-    private val charactersAdapter = CharactersAdapter()
+    private val charactersAdapter = CharactersAdapter {
+        viewModel.openCharacterDetails(it)
+    }
 
     override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?): View? {
         binding = FragmentCharacterListBinding.inflate(inflater, container, false)
